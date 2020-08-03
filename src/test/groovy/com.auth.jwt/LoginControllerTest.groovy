@@ -32,7 +32,7 @@ class LoginControllerTest extends Specification {
         mvc.perform(post("/userTokenStatic")
             .contentType(MediaType.APPLICATION_FORM_URLENCODED_VALUE)
             .characterEncoding("utf-8")
-            .param("user","983482098")
+            .param("phone","983482098")
             .param("password","pass123")).andExpect(MockMvcResultMatchers.status().isOk())
 
 
