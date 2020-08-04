@@ -2,6 +2,8 @@ package com.auth.jwt.controller;
 
 import java.util.Date;
 import java.util.List;
+
+import com.auth.jwt.service.IUsuarioService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,10 +48,10 @@ public class LoginController {
 
     }
 
-    //@Autowired
-    //private IUsuarioService US01;//UserDB
+    @Autowired //
+    private IUsuarioService US01;//UserDB
     ////////Dynamic Method for userToken which filter with a list
-    /*
+
     @PostMapping("userToken")       //user
     public ResponseEntity login(@RequestParam("phone") String phoneUser, @RequestParam("password") String pwd) { //User
         List<Usuario> listUsuario = US01.listarUsuarios(); //UserDB
@@ -69,7 +71,7 @@ public class LoginController {
 
         return response;
     }
-    */
+
 
 }
 
